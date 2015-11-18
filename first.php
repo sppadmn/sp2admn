@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);//return value of currently executing sccript?>" method="post" role="form">
   <div class="form-group">
     Name*: <input type="text" class="form-control" name="name" value="<?php echo $name;//assigining value equal to php variables?>">
-    <span class="error">*<?php echo $nameErr;?></span><br><!-- display the error message-->
+    <span class="error"><?php echo $nameErr;?></span><br><!-- display the error message-->
   </div>
   <div class="form-group">
     E-mail*: <input type="text" class="form-control" name="email" value="<?php echo $email;?>">
