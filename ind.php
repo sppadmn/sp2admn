@@ -69,13 +69,16 @@
 		}
 		//define variable d
 		$d=0;
-		for ($i=0; $i <= $k; $i++) { 
+		$c=0;
+		for ($i=1; $i <= $k; $i++) { 
 			# code...
-			if (array_key_exists($p->user, $json[$i])) {
+			if ($p->user==$json[$i]["username"]) {
 				# code...
 				if ($p->year== $json[$i]["year"]) {
 					# code...
 					echo "You have already selected a course in this year";
+					$c=$d=0;
+					break;
 				}
 				else{
 					# Enter the course in database
@@ -89,11 +92,12 @@
 		}
 		
 		//increament in k
-		if ($d==1) {
+		if ($d==1 or $c==1) {
 			# code...
+			$k=$k+1;
 			$json[$k] = array("username" => $p->user, "year" => $p->year, "course" => $p->course);
 			file_put_contents("courses.json", json_encode($json, JSON_PRETTY_PRINT));
-			$k=$k+1;
+			
 		}
 		fclose($file);
 		//open again in w form
