@@ -1,7 +1,22 @@
-{
-    "j": {
+[
+    {
+        "username": "t",
+        "year": "2012",
+        "course": "comps"
+    },
+    {
         "username": "j",
         "year": "2012",
-        "course": "mech"
+        "course": "comps"
+    },
+    {
+        "username": "j",
+        "year": "2012",
+        "course": "comps"
+    },
+    {
+        "username": "j",
+        "year": "2012",
+        "course": "comps"
     }
-}
+]

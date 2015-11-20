@@ -31,6 +31,7 @@
 			public $user="";
 			public $year="";
 			public $course="";
+			public $count=0;
 		}
 		$p=new Est();
 		if (isset($_SESSION["username"])) {
@@ -52,14 +53,54 @@
 			# code...
 			echo "select a course";
 		}
+		//open count file for array
+		$t=fopen("count.txt", "a+") or die("unable to open the file");
+		$k=fread($t, filesize("count.txt"));
+		echo $k;
+		fclose($t);
 		//write the complete data in json file
-		$file=fopen("users.json", "a+") or die("Unable to open the file");
+		$file=fopen("courses.json", "a+") or die("Unable to open the file");
 
 		//decode and write in json fiie
 		$json = json_decode(file_get_contents("courses.json"), true);
-
-		$json[$p->user] = array("username" => $p->user, "year" => $p->year, "course" => $p->course);
-		file_put_contents("courses.json", json_encode($json, JSON_PRETTY_PRINT));
+		if (empty($p->year) or empty($p->course)) {
+			# code...
+			echo "Please fill the fields properly";
+		}
+		//define variable d
+		$d=0;
+		for ($i=0; $i <= $k; $i++) { 
+			# code...
+			if (array_key_exists($p->user, $json[$i])) {
+				# code...
+				if ($p->year== $json[$i]["year"]) {
+					# code...
+					echo "You have already selected a course in this year";
+				}
+				else{
+					# Enter the course in database
+					$d=1;
+				}
+			}
+			else{
+					# Enter the course in database
+					$d=1;
+				}
+		}
+		
+		//increament in k
+		if ($d==1) {
+			# code...
+			$json[$k] = array("username" => $p->user, "year" => $p->year, "course" => $p->course);
+			file_put_contents("courses.json", json_encode($json, JSON_PRETTY_PRINT));
+			$k=$k+1;
+		}
+		fclose($file);
+		//open again in w form
+		
+		$j=fopen("count.txt", "w+");
+		fwrite($j, $k);
+		fclose($j);
 	?>
 </body>
 </html>
