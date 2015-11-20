@@ -1,14 +1,7 @@
-[
-	{
-		"course":"computer",
-		"taken":false
-	},
-	{
-		"course":"electrical",
-		"taken":false
-	},
-	{
-		"course":"electronics",
-		"taken":false
-	}	
-]
+{
+    "j": {
+        "username": "j",
+        "year": "2012",
+        "course": "mech"
+    }
+}
