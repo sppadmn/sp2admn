@@ -1,0 +1,32 @@
+{
+    "j": {
+        "username": "j",
+        "admin": "j",
+        "password": "j"
+    },
+    "ram": {
+        "username": "ram",
+        "admin": "ram",
+        "password": "ram"
+    },
+    "jai": {
+        "username": "jai",
+        "admin": "jai",
+        "password": "jai"
+    },
+    "sarab": {
+        "username": "sarab",
+        "admin": "sar",
+        "password": "sa"
+    },
+    "": {
+        "username": "",
+        "admin": "",
+        "password": ""
+    },
+    "pradeep": {
+        "username": "pradeep",
+        "admin": "pre",
+        "password": "pre"
+    }
+}

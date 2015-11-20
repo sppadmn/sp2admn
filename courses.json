@@ -1,0 +1,14 @@
+[
+	{
+		"course":"computer",
+		"taken":false
+	},
+	{
+		"course":"electrical",
+		"taken":false
+	},
+	{
+		"course":"electronics",
+		"taken":false
+	}	
+]
