@@ -15,7 +15,7 @@
 <body>
 	<div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
     <div class="container-fluid">
-        <div class="navbar-header"><a class="navbar-brand" href="#">CourSea</a>
+        <div class="navbar-header"><a class="navbar-brand" href="#"><img src="images/logo.png" height="60px" style="padding:top:0px;padding:left:10px;width:100%;"></a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
             </button>
         </div>
@@ -38,6 +38,7 @@
         </div>
     </div>
 	</div>
+<div class="bg">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4"></div>
@@ -144,5 +145,6 @@
 		fwrite($j, $k);
 		fclose($j);
 	?>
+</div>
 </body>
 </html>
