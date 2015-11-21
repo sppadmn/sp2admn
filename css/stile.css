@@ -54,3 +54,8 @@
 .profile{
     margin-right: 350px;
 }
+body{
+    background-image: url("../images/cs.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
