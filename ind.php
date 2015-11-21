@@ -2,29 +2,67 @@
 	session_start();
 ?>
 <html>
+<head>
+	<title>CourSea</title>
+	<meta charset="utf-8">
+ 	<link rel="icon" type="image/jpg" sizes="16x16" href="publi/logo_1.jpg">
+ 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+ 	<link rel="stylesheet" type="text/css" href="css/stile.css">
+ 	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
 <body>
-	<?php
-		echo "Hii";
-		if (isset($_SESSION['username'])) {
-			# code...
-			echo $_SESSION["username"];
-		}
-	?>
-	<br>
-	<a href="login.php">Logout</a>
-	<h2>Select course</h2>
-	<form method="post">
-		Year:<input type="text" name="year">
-		<br>
-		<select name="course">
-			<option value="comps">Computer Engineering</option>
-			<option value="ec">Electronics Engineering</option>
-			<option value="eee">Electrical Engineering</option>
-			<option value="civil">Civil Engineering</option>
-			<option value="mech">Mechanical Engineering</option>
-		</select>
-		<input type="submit">
-	</form>
+	<div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header"><a class="navbar-brand" href="#">CourSea</a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-menubuilder">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="profile"><a href="#">
+                	<img src="images/profile.png" width="50px" height="50px">
+                	<?php
+						if (isset($_SESSION['username'])) {
+						# code...
+						echo $_SESSION["username"];
+						}
+					?>
+                </a>
+                </li>
+                <li>
+                	<a href="login.php"><img src="images/logout.png" width="50px" height="50px"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4 courseform">
+				<form role="form" method="post">
+				  	<div class="form-group">
+    			  		<label class="sr-only control-label" for="email">Year:</label>
+    			  		<input type="text" class="form-control input-lg" name="year" placeholder="Enter Year here" size="20px">
+  					</div>
+  					<div class="form-group">
+						<label for="sel1" class="sr-only">Select list:</label>
+  						<select class="form-control input-lg" id="sel1" name="course">
+    						<option value="computer">Computer Engineering</option>
+    						<option value="electronics">Electronics Engineering</option>
+    						<option value="electrical">Electrical Engineering</option>
+    						<option value="civil">Civil Engineering</option>
+    						<option value="mechanical">Mechanical Engineering</option>
+  						</select>
+					</div>
+  					<button type="submit" class="btn btn-default btn-block btn-info">Add Course</button>
+				</form>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+	</div>
 	<?php
 		//define varibles and set equal to post varibles;
 		class Est{
