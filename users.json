@@ -6,12 +6,32 @@
     },
     "": {
         "username": "",
-        "admin": "",
+        "admin": "kk",
         "password": ""
     },
     "k": {
         "username": "k",
         "admin": "k",
         "password": "k"
+    },
+    "kishan": {
+        "username": "kishan",
+        "admin": "kk",
+        "password": "kk"
+    },
+    "pradeep": {
+        "username": "pradeep",
+        "admin": "pr",
+        "password": "pr"
+    },
+    "jay": {
+        "username": "jay",
+        "admin": "jay",
+        "password": "jay"
+    },
+    "re": {
+        "username": "re",
+        "admin": "re",
+        "password": "re"
     }
 }

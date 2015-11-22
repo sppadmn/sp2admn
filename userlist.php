@@ -37,6 +37,7 @@
 	</style>
 	</head>
 	<body>
+		<a href="admin.php" style="float:right;margin-top:10%;"><h3>Back to admin-></h3></a>
 		<center><img src="logo.png"></center>
 		<div class="container rop">
 			<div class="row">
@@ -50,7 +51,7 @@
 								# code..
 							if ($key=="username") {
 								# code...
-								echo "<h3>    $value</h3>";
+								echo "<h3>$value</h3>";
 							}
 				
 						}
@@ -76,6 +77,7 @@
 				</div>
 			</div>
 		</div>
+
 	</body>
 
 </html>

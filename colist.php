@@ -40,7 +40,9 @@
 	</style>
 	</head>
 	<body>
+		<a href="ind.php" style="float:right;margin-top:5%;"><h3>Back to Home-></h3></a>
 		<center><img src="logo.png"></center>
+
 		<div class="container rop">
 			<div class="row">
 				<div class="col-md-4">

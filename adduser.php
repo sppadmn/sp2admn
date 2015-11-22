@@ -91,13 +91,13 @@
 		</div>
 		<form method="post">
 		<center><fieldset>
-			<input type="text" name="full name" placeholder="Enter Your Name" size="30" class="height" name="user">
+			<input type="text"  placeholder="Enter Your Name" size="30" class="height" name="user">
 			<br><br>
 			<input type="text" placeholder="Enter Your Admission No."  size="30" class="height" name="admin">
 			<br><br>	
-			<input type="password" name="password" placeholder="Enter Your Password"  size="30" class="height" name="pass">
+			<input type="password"  placeholder="Enter Your Password"  size="30" class="height" name="pass">
 			<br><br>
-			<center><button type="submit" class="button">Add User</button>
+			<center><button type="submit" class="button" ><a href="admin.php">Add User</a></button>
 		</fieldset></center>
 	</form>
 
