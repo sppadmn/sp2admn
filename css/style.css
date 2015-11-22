@@ -1,0 +1,68 @@
+.loginform{
+	background-color: rgba(51, 133, 255, 0.4);
+	margin-top: 2%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	padding-right: 5%;
+	padding-left: 5%;
+	border-radius: 100px 0px 100px 0px;
+	border: 2px outset black;
+	margin-left: 3%;
+	box-shadow: 10px 10px 5px grey;
+	
+}
+input[type=submit]{
+	text-align: center;
+	width: 40px;
+	height: 10px;
+	background-color: ;
+}
+body{
+	background-image: url("../images/backimgg.jpg"); 
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.signtext{
+	font-size: 16px;
+	padding-top: 2%;
+	color: black;
+
+}
+a{
+	font-size: 19px;
+	color: black;
+}
+.btn{
+	font-size: 18px;
+}
+
+label{
+	font-size: 18px;
+	color: black;
+	padding-left: 1%;
+}
+img{
+	animation-name: bounceInDown;
+	animation-duration: 2s;
+	animation-delay:0s;
+	width: 40%;
+	height: 20%;
+}
+
+@keyframes bounceInDown {
+            0% {
+               opacity: 0;
+               transform: translateY(-2000px);
+            }
+            60% {
+               opacity: 1;
+               transform: translateY(30px);
+            }
+            80% {
+               transform: translateY(-10px);
+            }
+            100% {
+               transform: translateY(0);
+            }
+         }
+         
