@@ -90,7 +90,7 @@
 			<center><button class="button button1" Onclick="window.location.href='adduser.php'"/>Add User</button></center>
 		</div>
 		<div class="a2">
-			<center><button class="button button2">User List</button></center>
+			<center><button class="button button2" Onclick="window.location.href='userlist.php'"/>User List</button></center>
 		</div>
 		</div>
 		</div>

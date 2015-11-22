@@ -1,6 +1,7 @@
 <!--login usin php-->
 <?php
 	session_start();
+	$_SESSION["course"]="";
 ?>
 
 <html>

@@ -22,6 +22,7 @@
         <div class="collapse navbar-collapse navbar-menubuilder">
             <ul class="nav navbar-nav navbar-right">
                 <li class="profile"><a href="#">
+                	<h4>
                 	<img src="images/profile.png" width="50px" height="50px">
                 	<?php
 						if (isset($_SESSION['username'])) {
@@ -29,7 +30,11 @@
 						echo $_SESSION["username"];
 						}
 					?>
+					</h4>
                 </a>
+                </li>
+                <li>
+                	<a href="colist.php"><img src="images/course.png" width="50px" height="50px" style="margin-right:100px;"></a>
                 </li>
                 <li>
                 	<a href="login.php"><img src="images/logout.png" width="50px" height="50px"></a>
@@ -43,6 +48,7 @@
 		<div class="row">
 			<div class="col-md-4"></div>
 			<div class="col-md-4 courseform">
+				<h4><?php echo $_SESSION["course"]; ?></h4>
 				<form role="form" method="post">
 				  	<div class="form-group">
     			  		<label class="sr-only control-label" for="email">Year:</label>
@@ -104,7 +110,7 @@
 		$json = json_decode(file_get_contents("courses.json"), true);
 		if (empty($p->year) or empty($p->course)) {
 			# code...
-			echo "Please fill the fields properly";
+			$_SESSION["course"]="Please fill the fields properly";
 		}
 		//define variable d
 		$d=0;
@@ -115,7 +121,7 @@
 				# code...
 				if ($p->year== $json[$i]["year"]) {
 					# code...
-					echo "You have already selected a course in this year";
+					$_SESSION["course"]="You have been already selected a course in this year";
 					$c=$d=0;
 					break;
 				}
