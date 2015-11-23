@@ -11,6 +11,16 @@
  	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ 	<script type="text/javascript">
+ 		function validateForm() {
+   		 var x = document.forms["myForm"]["year"].value;
+    	 var z =x.length;
+    	 if(!isNaN(z)){
+    	 	alert("Year must conatain digit");
+    	 	return false;
+    	 }
+}
+ 	</script>
 </head>
 <body>
 	<div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
@@ -49,10 +59,10 @@
 			<div class="col-md-4"></div>
 			<div class="col-md-4 courseform">
 				<h4><?php echo $_SESSION["course"]; ?></h4>
-				<form role="form" method="post">
+				<form role="form" method="post" name="myForm">
 				  	<div class="form-group">
     			  		<label class="sr-only control-label" for="email">Year:</label>
-    			  		<input type="text" class="form-control input-lg" name="year" placeholder="Enter Year here" size="20px">
+    			  		<input type="text" class="form-control input-lg" name="year" placeholder="Enter Year here" minlength="4" size="20px" required>
   					</div>
   					<div class="form-group">
 						<label for="sel1" class="sr-only">Select list:</label>

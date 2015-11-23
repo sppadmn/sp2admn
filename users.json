@@ -1,19 +1,4 @@
 {
-    "j": {
-        "username": "j",
-        "admin": "j",
-        "password": "j"
-    },
-    "": {
-        "username": "",
-        "admin": "kk",
-        "password": ""
-    },
-    "k": {
-        "username": "k",
-        "admin": "k",
-        "password": "k"
-    },
     "kishan": {
         "username": "kishan",
         "admin": "kk",
@@ -28,10 +13,5 @@
         "username": "jay",
         "admin": "jay",
         "password": "jay"
-    },
-    "re": {
-        "username": "re",
-        "admin": "re",
-        "password": "re"
     }
 }

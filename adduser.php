@@ -80,6 +80,21 @@
 		}
 
 </style>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["user"].value;
+    var d=x.length;
+    if (d<5) {
+    	alert("username must contain more than 5 letters");
+    	return false;
+    };
+    var z = document.forms["myForm"]["pass"].value;
+    if (z==x) {
+    	alert("Username and password are same");
+        return false;
+    };
+}
+</script>
 	</head>
 	<body>
 		<div class="container">
@@ -89,13 +104,13 @@
 			</div>
 			<div class="col-md-4"></div>
 		</div>
-		<form method="post">
+		<form method="post" name="myForm" onsubmit="return validateForm()" >
 		<center><fieldset>
-			<input type="text"  placeholder="Enter Your Name" size="30" class="height" name="user">
+			<input type="text"  placeholder="Enter Your Name" size="30" class="height" name="user" minlength="5" maxlength="10" autofocus required>
 			<br><br>
-			<input type="text" placeholder="Enter Your Admission No."  size="30" class="height" name="admin">
+			<input type="text" placeholder="Enter Your Admission No."  size="30" class="height" name="admin" required>
 			<br><br>	
-			<input type="password"  placeholder="Enter Your Password"  size="30" class="height" name="pass">
+			<input type="password"  placeholder="Enter Your Password"  size="30" class="height" name="pass" required>
 			<br><br>
 			<center><button type="submit" class="button" ><a href="admin.php">Add User</a></button>
 		</fieldset></center>
